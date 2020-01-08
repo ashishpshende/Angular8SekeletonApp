@@ -1,4 +1,4 @@
-import { HelperService } from '../helpers/helper.service';
+import { HelperService } from 'src/app/services/helper/helper.service';
 
 export class BaseModel {
     public Id:number;

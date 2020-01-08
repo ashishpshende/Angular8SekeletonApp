@@ -1,4 +1,6 @@
 import { BaseModel } from '../core/base-model';
+import { Role } from './role';
+import { HelperService } from 'src/app/services/helper/helper.service';
 
 
 export class User  extends BaseModel {

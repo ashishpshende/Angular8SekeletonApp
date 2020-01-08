@@ -38,6 +38,51 @@ export class AuthenticationService {
 
 
   }
+  register(user:User, success: (any), failure: (any)) {
+    
+    var requestParams = {
+      "UserName": user.UserName,
+      "Password": user.Password
+    };
+    this.networkService.post(USER_LOGIN_URL, requestParams, response => {
+      var token = response["Token"];
+      token = "Bearer " + token;
+      localStorage.setItem(AUTH_TOKEN_KEY, token)
+      localStorage.setItem(AUTH_STATUS, "TRUE");
+      this.authenticationState.next(true);
+      success();
+    }, error => {
+      console.log("Error:" + error);
+      localStorage.setItem(AUTH_STATUS, "FALSE");
+      this.authenticationState.next(false);
+      failure();
+    })
+
+
+  }
+
+  resetPassword(user:User, success: (any), failure: (any)) {
+    
+    var requestParams = {
+      "UserName": user.UserName,
+      "Password": user.Password
+    };
+    this.networkService.post(USER_LOGIN_URL, requestParams, response => {
+      var token = response["Token"];
+      token = "Bearer " + token;
+      localStorage.setItem(AUTH_TOKEN_KEY, token)
+      localStorage.setItem(AUTH_STATUS, "TRUE");
+      this.authenticationState.next(true);
+      success();
+    }, error => {
+      console.log("Error:" + error);
+      localStorage.setItem(AUTH_STATUS, "FALSE");
+      this.authenticationState.next(false);
+      failure();
+    })
+
+
+  }
   getUseDetails(success: (any)) {
     
     this.networkService.get(USER_DETAIL_URL, response => {

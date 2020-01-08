@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HelperService } from '../helper/helper.service';
 import { User } from 'src/app/models/user-access-management/user';
+import { NetworkService } from '../network/network.service';
+import { Role } from 'src/app/models/user-access-management/role';
 const USER_DETAIL_URL = '/users/info'
-const USER_TERMINAL_LISTL_URL = '/masters/terminals/byUser/'
-const USER_TERMINAL_LIST = '/masters/terminals'
 @Injectable({
   providedIn: 'root'
 })
@@ -16,7 +16,7 @@ export class AuthorizationService {
 
   }
   
-  getUseDetails(success: (any), failure: (any)) {
+  getUseDetails(success: (any)) {
     this.networkService.get(USER_DETAIL_URL, response => {
       this.currentUser = new User(response);
       this.storeUser(this.currentUser);
@@ -31,7 +31,7 @@ export class AuthorizationService {
       }
 
 
-    }, error => {
+    }, () => {
       this.currentUser = new User(HelperService.EmptyJSON());
       this.currentUser.Id = 0;
       this.currentUser.Name = "OOps, Unable to fetch User Name";
@@ -44,7 +44,6 @@ export class AuthorizationService {
 
   whichRole() {
     if (this.currentUser != null && this.currentUser.Roles != null && this.currentUser.Roles.length != 0) {
-      var roles = new Array();
       this.currentUser.Roles.forEach(role => {
 
         return role.Name;
@@ -85,7 +84,6 @@ export class AuthorizationService {
   }
   hasAccess(roleName: String) {
     if (this.currentUser != null && this.currentUser.Roles != null && this.currentUser.Roles.length != 0) {
-      var roles = new Array();
       this.currentUser.Roles.forEach(role => {
         if (role.Name == roleName) {
           return true;
@@ -99,7 +97,6 @@ export class AuthorizationService {
   }
   hasAccessFor(roleNames: String[]) {
     if (this.currentUser != null && this.currentUser.Roles != null && this.currentUser.Roles.length != 0) {
-      var roles = new Array();
       this.currentUser.Roles.forEach(role => {
         roleNames.forEach(roleName => {
           if (role.Name == roleName) {
@@ -117,7 +114,6 @@ export class AuthorizationService {
 
   hasAccessForModule(currentModule: String) {
     if (this.currentUser != null && this.currentUser.Roles != null && this.currentUser.Roles.length != 0) {
-      var roles = new Array();
       this.currentUser.Modules.forEach(module => {    
           if (module.Name == currentModule) {
             return true;
