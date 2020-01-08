@@ -1,0 +1,43 @@
+<div class="row no-gutters">
+    <div class="col-auto mr-auto">
+        <div class="d-flex align-items-center">
+            <div id="navBtn">
+                <div class="nav-btn">
+                    <span class="bar medium"></span>
+                    <span class="bar large"></span>
+                    <span class="bar small"></span>
+                </div>
+            </div>
+            <div id="logoWrapper">
+                <h1>
+                     Application Name
+                    <!-- <a href="javascript:;">
+                        <img src="assets/images/logo.svg" alt="Lookup Application" />
+                    </a> -->
+                </h1>
+            </div>
+        </div>
+    </div>
+    <div class="col-auto">
+        <div class="d-flex justify-content-end align-items-center h-100">
+            <ul id="headerLinks" class="mr-20 align-items-center">
+                <li>
+                    <a href="javascript:;" (click)="logout()" class="text-dark font-weight-bold">
+                        <span class="tpaicon-logout mr-2"></span>Logout
+                    </a>
+                </li>
+                <li>
+                    <div id="userWrapper" class="border border-primary rounded-lg">
+                        <div class="user head-link d-flex align-items-center py-2">
+                            <i class="tpaicon-user fs-18 ml-1"></i>
+                            <span class="ml-3 pl-2 border-left border-primary">
+                                {{loggedInUser.Name}}<br />
+                                <span class="text-primary-light">{{loggedInUser.Account.Name}}</span>
+                            </span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

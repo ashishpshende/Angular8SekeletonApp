@@ -1,1 +1,209 @@
-/* You can add global styles to this file, and also import other style files */
+[class^="tpaicon-"], [class*=" tpaicon-"], [class^="glyphicon-"], [class*=" glyphicon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'tpa' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .tpaicon-terminal:before {
+    content: "\e929";
+  }
+  .tpaicon-qc-delay:before {
+    content: "\e928";
+  }
+  .tpaicon-berthing:before {
+    content: "\e938";
+  }
+  .tpaicon-clock:before {
+    content: "\e927";
+  }
+  .tpaicon-logout:before {
+    content: "\e926";
+  }
+  .tpaicon-counterclockwise:before {
+    content: "\e925";
+  }
+  .tpaicon-upload:before {
+    content: "\e923";
+  }
+  .tpaicon-download:before {
+    content: "\e924";
+  }
+  .tpaicon-show:before {
+    content: "\e921";
+  }
+  .tpaicon-hide:before {
+    content: "\e922";
+  }
+  .tpaicon-remove:before {
+    content: "\e920";
+  }
+  .tpaicon-add:before {
+    content: "\e91f";
+  }
+  .tpaicon-user-group:before {
+    content: "\e915";
+  }
+  .tpaicon-user-add:before {
+    content: "\e914";
+  }
+  .tpaicon-user-remove:before {
+    content: "\e916";
+  }
+  .tpaicon-user-accept:before {
+    content: "\e917";
+  }
+  .tpaicon-setting:before {
+    content: "\e919";
+  }
+  .tpaicon-priority:before {
+    content: "\e91a";
+  }
+  .tpaicon-menu:before {
+    content: "\e91b";
+  }
+  .tpaicon-task-list:before {
+    content: "\e918";
+  }
+  .tpaicon-list-items:before {
+    content: "\e91c";
+  }
+  .tpaicon-copy:before {
+    content: "\e91d";
+  }
+  .tpaicon-edit:before {
+    content: "\e91e";
+  }
+  .tpaicon-bid:before {
+    content: "\e913";
+  }
+  .tpaicon-garbage:before {
+    content: "\e912";
+  }
+  .tpaicon-calendar:before {
+    content: "\e911";
+  }
+  .tpaicon-magnifying:before {
+    content: "\e910";
+  }
+  .tpaicon-message-edit:before {
+    content: "\e90d";
+  }
+  .tpaicon-message-send:before {
+    content: "\e90e";
+  }
+  .tpaicon-message-received:before {
+    content: "\e90f";
+  }
+  .tpaicon-user:before {
+    content: "\e90c";
+  }
+  .tpaicon-arrow-download:before {
+      content: "\e90a";
+  }
+  .tpaicon-arrow-upload:before {
+  content: "\e90b";
+  }
+  .tpaicon-checkmark:before {
+    content: "\e904";
+  }
+  .tpaicon-arrow-up:before {
+  content: "\e905";
+  }
+  .tpaicon-arrow-right:before {
+  content: "\e906";
+  }
+  .tpaicon-arrow-left:before {
+  content: "\e907";
+  }
+  .tpaicon-arrow-down:before {
+  content: "\e908";
+  }
+  .tpaicon-bell:before {
+  content: "\e909";
+  }
+  .tpaicon-information:before {
+  content: "\e903";
+  }
+  .tpaicon-question:before {
+  content: "\e900";
+  }
+  .tpaicon-list:before {
+  content: "\e901";
+  }
+  .tpaicon-dashboard:before {
+  content: "\e902";
+  }
+  
+  .glyphicon-ok:before {
+    content: "\e904";
+  }
+  ngx-select-dropdown .ngx-dropdown-container .ngx-dropdown-button {
+    font-size:12px !important;
+        display: block !important;
+        width: 100% !important;
+        height: calc(1.5em + 1.2146rem + 2px) !important;
+        padding: .6073rem 1.4286rem !important;
+        font-size: 1rem !important;
+        font-weight: 400 !important;
+        line-height: 1.5 !important;
+        color: #282828 !important;
+        background-color: #fff !important;
+        background-clip: padding-box !important;
+        border: 1px solid #ededed !important;
+        border-radius: 50rem !important;
+        box-shadow: 1px 1px 3px rgba(0,0,0,.03) !important;
+        transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out !important;
+        .nsdicon-angle-down{
+          &:before{
+            content: "";
+          }
+        }
+    }
+    .bs-timepicker-field{
+      padding: 0px !important;
+    }
+    // table.dataTable tr th{
+    //   padding: 0.75rem;
+    // }
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+      /* IE10+ specific styles go here */  
+      .content-wrapper{
+          top:90px !important;
+          position: relative;
+      }
+    }
+    .navbar .navbar-nav>li>a>i{
+      font-size: 1.5rem !important; 
+    }
+    .text-amount {
+      color: #6da44b;
+      font-size: 18px;
+      margin: 4px 0 4px 0;
+    }
+    .text-large {
+      font-size: 1.2rem !important;
+      font-weight: 400 !important;
+    }
+    .fixed-card-content.mCustomScrollbar._mCS_1 > .mCSB_inside > .mCSB_container{
+      margin-right:8px;
+  } 
+    // .margin-bottom-1 {
+    //   margin-bottom: 10px;
+    // }
+    // .Service-Mapping-Clear
+    // {
+    //   margin-top: 200px;
+    // }
+    // .Service-Mapping-Save
+    // {
+    //   margin-top: 10px;
+    // }

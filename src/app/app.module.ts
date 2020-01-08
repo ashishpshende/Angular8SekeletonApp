@@ -9,6 +9,7 @@ import { AuthGuardService } from './services/auth-guard/auth-guard.service';
 import { AuthenticationService } from './services/authentication/authentication.service';
 import { AuthorizationService } from './services/authorization/authorization.service';
 import { HttpClientModule } from '@angular/common/http';
+import { HeaderService } from './members/home/header/HeaderService';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { HttpClientModule } from '@angular/common/http';
   providers: [
     AuthenticationService ,
     AuthorizationService,
-    AuthGuardService
+    AuthGuardService,
+    HeaderService
   ],
   bootstrap: [AppComponent]
 })

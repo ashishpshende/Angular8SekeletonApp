@@ -28,9 +28,30 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/assets/css/toastr.css",
+              "src/assets/plugins/bootstrap/css/bootstrap.min.css",  
+              "src/assets/plugins/dataTable/css/dataTables.bootstrap4.min.css",          
+              "src/assets/plugins/datetimepicker/bs-datepicker.css",
+              "node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css",
+              "src/assets/css/fonts.css",
+              "src/assets/css/styles.css",
+              "src/assets/css/tpa.css",
+              "node_modules/ngx-select-dropdown/dist/assets/style.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "src/assets/plugins/bootstrap/js/bootstrap.min.js",    
+              "src/assets/plugins/bootstrap/js/moment.min.js",
+              "src/assets/plugins/datetimepicker/bootstrap-datetimepicker.min.js",
+              "src/assets/plugins/bootstrap-select/bootstrap-select.min.js",  
+              "src/assets/plugins/dataTable/js/jquery.dataTables.min.js", 
+              "src/assets/plugins/dataTable/js/dataTables.bootstrap4.min.js",
+              "node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js",
+              "src/assets/plugins/auto-numeric/autoNumeric.js",
+              "src/assets/js/scripts.js"
+              
+            ]
           },
           "configurations": {
             "production": {
@@ -93,9 +114,30 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/assets/css/toastr.css",
+              "src/assets/plugins/bootstrap/css/bootstrap.min.css",  
+              "src/assets/plugins/dataTable/css/dataTables.bootstrap4.min.css",          
+              "src/assets/plugins/datetimepicker/bs-datepicker.css",
+              "node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css",
+              "src/assets/css/fonts.css",
+              "src/assets/css/styles.css",
+              "src/assets/css/tpa.css",
+              "node_modules/ngx-select-dropdown/dist/assets/style.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "src/assets/plugins/bootstrap/js/bootstrap.min.js",    
+              "src/assets/plugins/bootstrap/js/moment.min.js",
+              "src/assets/plugins/datetimepicker/bootstrap-datetimepicker.min.js",
+              "src/assets/plugins/bootstrap-select/bootstrap-select.min.js",  
+              "src/assets/plugins/dataTable/js/jquery.dataTables.min.js", 
+              "src/assets/plugins/dataTable/js/dataTables.bootstrap4.min.js",
+              "node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js",
+              "src/assets/plugins/auto-numeric/autoNumeric.js",
+              "src/assets/js/scripts.js"
+              
+            ]
           }
         },
         "lint": {

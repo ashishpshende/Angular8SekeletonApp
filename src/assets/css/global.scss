@@ -1,0 +1,183 @@
+// http://ionicframework.com/docs/theming/
+@import "~@ionic/angular/css/core.css";
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+$font-family-md-base: "Lato";
+$font-family-ios-base: "Lato";
+$font-family-wp-base: "Lato";
+
+.detail-page-header{
+  background-color: #0caa41,
+  align-title="center"
+}
+.body {
+  background-color: #eee;
+  font-size: 15px;
+}
+.margin-top-50 {
+  margin-top: 50px;
+}
+.margin-top-200 {
+  margin-top: 200px;
+}
+.text-align-center {
+  text-align: center;
+}
+.card {
+  background-color: #fff;
+  margin: 0px;
+  border-radius: 0px;
+  padding: 8px 14px;
+  h1 {
+    color: #6da44b;
+    font-size: 18px;
+    margin: 4px 0 4px 0;
+  }
+  p {
+    margin: 0 0 8px 0;
+    font-size: 14px;
+    color: #333;
+    font-weight: 500;
+  }
+  &.flexible {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+  }
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.block-ui-wrapper {
+  background: rgba(256, 256, 256, 0.67) !important;
+}
+.text-small-amount {
+  color: #6da44b;
+  font-size: 11px;
+  margin: 4px 0 4px 0;
+}
+.text-amount {
+   color: #6da44b;
+   font-size: 18px;
+   margin: 4px 0 4px 0;
+ }
+.ion-row-fullheight {
+  flex: 1;
+  height: 100%;
+}
+.card-background-page {
+  ion-card {
+    position: relative;
+    text-align: center;
+  }
+}
+.ion-segment {
+  justify-content: space-between;
+  overflow: auto;
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    display: none;
+  }
+
+  ion-segment-button.segment-button {
+    flex: 1 0 100px;
+  }
+}
+
+.title-50 {
+  font-weight: 100;
+  font-size: 1rem;
+}
+.title-200 {
+  font-weight: 200;
+  font-size: 2rem;
+}
+
+.text-large {
+  font-size: 1.2rem !important;
+  font-weight: 400 !important;
+}
+.toolbar-background {
+  background-color: rgb(137, 167, 120);
+}
+.main-header{
+background-color:#0caa41;
+ color: white;
+}
+.text-medium {
+  font-size: 1.0rem !important;
+  font-weight: 400 !important;
+}
+.hide {
+  display: none;
+}
+.price-font {
+  color: green;
+}
+.text-small {
+  font-size: 0.8rem !important;
+  font-weight: 400 !important;
+}
+.text-tiny {
+  font-size: 12px !important;
+  font-weight: 400 !important;
+}
+.text-extra-tiny {
+  font-size: 5px !important;
+  font-weight: 400 !important;
+}
+.bold-dark-high { 
+  font-weight: 700 !important;
+}
+.bold-dark-medium {  
+  font-weight: 600 !important;
+}
+.bold-dark-low {  
+  font-weight: 500 !important;
+}
+.bg-grey {
+  background: #eee;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.text-font-12 {
+  font-size: 12 !important;
+  
+}
+
+// Badges
+.badge-warning {
+  color: #212529;
+  background-color: #ffc107;
+}
+
+.badge-pill {
+  padding-right: 0.6em;
+  padding-left: 0.6em;
+  border-radius: 10rem;
+}
+.badge {
+  display: inline-block;
+  padding: 0.25em 0.4em;
+  font-size: 75%;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25rem;
+}

@@ -19,7 +19,13 @@
     "@angular/platform-browser": "~8.2.5",
     "@angular/platform-browser-dynamic": "~8.2.5",
     "@angular/router": "~8.2.5",
+    "@ng-bootstrap/ng-bootstrap": "^5.1.5",
+    "@types/jquery": "^3.3.31",
+    "jquery": "^3.4.1",
+    "malihu-custom-scrollbar-plugin": "^3.1.5",
     "moment-timezone": "^0.5.27",
+    "ng-block-ui": "^2.1.8",
+    "ngx-select-dropdown": "^1.3.0",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"

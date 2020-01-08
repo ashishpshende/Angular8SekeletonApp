@@ -1,0 +1,97 @@
+.pagination, .dataTables_paginate {
+  display: flex;
+  margin-bottom: 0;
+  @include list-unstyled();
+  @include border-radius();
+}
+
+.page-link {
+  position: relative;
+  display: block;
+  padding: $pagination-padding-y $pagination-padding-x 2px;
+  margin-left: $pagination-border-width * 5;
+  line-height: $pagination-line-height;
+  font-size: $pagination-font-size;
+  color: $pagination-color;
+  background-color: $pagination-bg;
+  border: $pagination-border-width solid $pagination-border-color;
+  width: $master-space;
+  height: $master-space;
+  text-align: center;
+  cursor: pointer;
+  @include border-radius($border-radius-circle);
+
+  [class*="tpaicon-arrow-"] {
+    margin-top: -2px;
+    &:first-child { margin-right: -2px; }
+    &:last-child { margin-left: -2px; }
+  }
+
+  &:hover {
+    z-index: 2;
+    color: $pagination-hover-color;
+    text-decoration: none;
+    background-color: $pagination-hover-bg;
+    border-color: $pagination-hover-border-color;
+  }
+
+  &:focus {
+    z-index: 2;
+    outline: $pagination-focus-outline;
+    // box-shadow: $pagination-focus-box-shadow;
+    box-shadow: $btn-active-box-shadow;
+  }
+}
+
+.page-item {
+  &:first-child {
+    .page-link {
+      margin-left: 0;
+      @include border-radius($border-radius-circle);
+    }
+  }
+  &:last-child {
+    .page-link {
+      @include border-radius($border-radius-circle);
+    }
+  }
+
+  &.active .page-link {
+    z-index: 1;
+    color: $pagination-active-color;
+    background-color: $pagination-active-bg;
+    border-color: $pagination-active-border-color;
+  }
+
+  &.disabled .page-link {
+    color: $pagination-disabled-color;
+    pointer-events: none;
+    // Opinionated: remove the "hand" cursor set previously for .page-link
+    cursor: auto;
+    background-color: $pagination-disabled-bg;
+    border-color: $pagination-disabled-border-color;
+    &:focus {box-shadow: none;}    
+  }
+}
+.paginate_button.disabled {
+  color: $pagination-disabled-color;
+  pointer-events: none;
+  // Opinionated: remove the "hand" cursor set previously for .page-link
+  cursor: auto;
+  background-color: $pagination-disabled-bg;
+  border-color: $pagination-disabled-border-color;
+  &:focus {box-shadow: none;}    
+}
+
+
+//
+// Sizing
+//
+
+.pagination-lg {
+  @include pagination-size($pagination-padding-y-lg, $pagination-padding-x-lg, $font-size-lg, $line-height-lg, $border-radius-lg);
+}
+
+.pagination-sm {
+  @include pagination-size($pagination-padding-y-sm, $pagination-padding-x-sm, $font-size-sm, $line-height-sm, $border-radius-sm);
+}
