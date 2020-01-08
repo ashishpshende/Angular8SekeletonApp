@@ -2,6 +2,17 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.4.
 
+This i gives complete package for starting your new Angular Application. 
+Following features are includede in this project
+
+	  1. User Access Management: Login, Sign-Up, Forgot-Password, Reset-Password, User Profile, Logout
+	  2. Slide Menu - Dashboard, Menu 
+	  3. HTTP Interceptor
+	  3. Network Service
+	  4. Authentication and Authorization Service
+	  5. Helper Service
+	  6. Basic Models
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
