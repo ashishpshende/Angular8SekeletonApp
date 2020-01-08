@@ -4,13 +4,14 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 This i gives complete package for starting your new Angular Application. 
 Following features are includede in this project
-	# User Access Management: Login, Sign-Up, Forgot-Password, Reset-Password, User Profile, Logout
-	# Slide Menu - Dashboard, Menu 
-	# HTTP Interceptor
-	# Network Service
-	# Authentication and Authorization Service
-	# Helper Service
-	# Basic Models
+
+	  1. User Access Management: Login, Sign-Up, Forgot-Password, Reset-Password, User Profile, Logout
+	  2. Slide Menu - Dashboard, Menu 
+	  3. HTTP Interceptor
+	  3. Network Service
+	  4. Authentication and Authorization Service
+	  5. Helper Service
+	  6. Basic Models
 
 ## Development server
 
