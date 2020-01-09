@@ -10,11 +10,18 @@ import { AuthenticationService } from './services/authentication/authentication.
 import { AuthorizationService } from './services/authorization/authorization.service';
 import { HttpClientModule } from '@angular/common/http';
 import { HeaderService } from './members/home/header/HeaderService';
+import { SignUpComponent } from './public/sign-up/sign-up.component';
+import { ForgotPasswordComponent } from './public/forgot-password/forgot-password.component';
+import { ForgotPasswordModule } from './public/forgot-password/forgot-password.module';
+import { ResetPasswordModule } from './public/reset-password/reset-password.module';
+import { SignUpModule } from './public/sign-up/sign-up.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent   
+    LoginComponent,
+    SignUpComponent,
+    ForgotPasswordComponent   
   ],
   imports: [
     BrowserModule,
@@ -25,8 +32,14 @@ import { HeaderService } from './members/home/header/HeaderService';
       { path: '', redirectTo:'home', pathMatch:'full' },
       { path: 'home', loadChildren: './members/home/home.module#HomeModule', canActivate: [AuthGuardService] },
       { path: 'login', component: LoginComponent },
+      { path: 'sign-up',  component:SignUpComponent },
+      { path: 'forgot-password', component: ForgotPasswordComponent },
+
       
     ], { useHash: true, onSameUrlNavigation: 'ignore' }, ),
+    ForgotPasswordModule,
+    ResetPasswordModule,
+    SignUpModule,
     
   ],
   providers: [

@@ -24,9 +24,12 @@
                 <input type="password" name="Password" class="form-control" [(ngModel)]="user.Password" placeholder="Password">
              </div>             
             
-             <button  id="submitButton" name="submitButton" type="submit" (click)="login()" class="btn btn-black">{{submitButtonTitle}}</button>
-            
-          <p [hidden]="frontendValidation" color="danger">
+             <button  id="loginButton" name="submitButton" type="submit" (click)="login()" class="btn btn-black">{{submitButtonTitle}}</button>
+             <p>
+             <a href="javascript:;" (click)="forgotPasswordLinkClicked()"> Forgot Password?  </a>
+            &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; New Here? <a href="javascript:;"  (click)="signUpLinkClicked()">  Sign Up  </a>
+            </p>
+             <p [hidden]="frontendValidation" color="danger">
             Please provide User Name and Password
           </p>
           <p [hidden]="backendValidation" color="danger">

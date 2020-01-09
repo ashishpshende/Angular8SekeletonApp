@@ -90,5 +90,13 @@ export class LoginComponent implements OnInit {
     
       
   }
+  forgotPasswordLinkClicked()
+  {
+    this.router.navigate(['forgot-password']);
+  }
+  signUpLinkClicked()
+  {
+    this.router.navigate(['sign-up']);
+  }
 
 }

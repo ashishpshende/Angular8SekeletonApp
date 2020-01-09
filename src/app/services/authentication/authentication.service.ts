@@ -2,11 +2,9 @@ import { Injectable } from '@angular/core';
 import { NetworkService } from '../network/network.service';
 import { BehaviorSubject } from 'rxjs';
 import { User } from 'src/app/models/user-access-management/user';
+import { URLConstants } from 'src/app/constants/url-constants';
+import { KeywordConstants } from 'src/app/constants/keyword-constants';
 
-const AUTH_TOKEN_KEY = 'Authorization';
-const AUTH_STATUS = 'AUTH_STATUS';
-const USER_LOGIN_URL = '/users/login'
-const USER_DETAIL_URL = '/users/info'
 @Injectable({
   providedIn: 'root'
 })
@@ -22,16 +20,16 @@ export class AuthenticationService {
       "UserName": userName,
       "Password": password
     };
-    this.networkService.post(USER_LOGIN_URL, requestParams, response => {
+    this.networkService.post(URLConstants.UserAccessManagement.LOGIN, requestParams, response => {
       var token = response["Token"];
       token = "Bearer " + token;
-      localStorage.setItem(AUTH_TOKEN_KEY, token)
-      localStorage.setItem(AUTH_STATUS, "TRUE");
+      localStorage.setItem(KeywordConstants.Authorization.AUTH_TOKEN_KEY, token)
+      localStorage.setItem(KeywordConstants.Authorization.AUTH_STATUS, "TRUE");
       this.authenticationState.next(true);
       success();
     }, error => {
       console.log("Error:" + error);
-      localStorage.setItem(AUTH_STATUS, "FALSE");
+      localStorage.setItem(KeywordConstants.Authorization.AUTH_STATUS, "FALSE");
       this.authenticationState.next(false);
       failure();
     })
@@ -44,16 +42,16 @@ export class AuthenticationService {
       "UserName": user.UserName,
       "Password": user.Password
     };
-    this.networkService.post(USER_LOGIN_URL, requestParams, response => {
+    this.networkService.post(URLConstants.UserAccessManagement.LOGIN, requestParams, response => {
       var token = response["Token"];
       token = "Bearer " + token;
-      localStorage.setItem(AUTH_TOKEN_KEY, token)
-      localStorage.setItem(AUTH_STATUS, "TRUE");
+      localStorage.setItem(KeywordConstants.Authorization.AUTH_TOKEN_KEY, token)
+      localStorage.setItem(KeywordConstants.Authorization.AUTH_STATUS, "TRUE");
       this.authenticationState.next(true);
       success();
     }, error => {
       console.log("Error:" + error);
-      localStorage.setItem(AUTH_STATUS, "FALSE");
+      localStorage.setItem(KeywordConstants.Authorization.AUTH_STATUS, "FALSE");
       this.authenticationState.next(false);
       failure();
     })
@@ -67,16 +65,16 @@ export class AuthenticationService {
       "UserName": user.UserName,
       "Password": user.Password
     };
-    this.networkService.post(USER_LOGIN_URL, requestParams, response => {
+    this.networkService.post(URLConstants.UserAccessManagement.LOGIN, requestParams, response => {
       var token = response["Token"];
       token = "Bearer " + token;
-      localStorage.setItem(AUTH_TOKEN_KEY, token)
-      localStorage.setItem(AUTH_STATUS, "TRUE");
+      localStorage.setItem(KeywordConstants.Authorization.AUTH_TOKEN_KEY, token)
+      localStorage.setItem(KeywordConstants.Authorization.AUTH_STATUS, "TRUE");
       this.authenticationState.next(true);
       success();
     }, error => {
       console.log("Error:" + error);
-      localStorage.setItem(AUTH_STATUS, "FALSE");
+      localStorage.setItem(KeywordConstants.Authorization.AUTH_STATUS, "FALSE");
       this.authenticationState.next(false);
       failure();
     })
@@ -85,7 +83,7 @@ export class AuthenticationService {
   }
   getUseDetails(success: (any)) {
     
-    this.networkService.get(USER_DETAIL_URL, response => {
+    this.networkService.get(URLConstants.UserAccessManagement.PROFILE, response => {
       this.currentUser = new User(response["user_profile"]); 
      
       success(this.currentUser);
@@ -94,15 +92,15 @@ export class AuthenticationService {
     })
   }
   logout() {
-    localStorage.removeItem(AUTH_TOKEN_KEY);
+    localStorage.removeItem(KeywordConstants.Authorization.AUTH_TOKEN_KEY);
     localStorage.clear();
-    localStorage.setItem(AUTH_STATUS, "FALSE");
+    localStorage.setItem(KeywordConstants.Authorization.AUTH_STATUS, "FALSE");
     this.authenticationState.next(false);
   }
   isAuthenticated() {
     
     //  return true;
-    var authenticationStatus = localStorage.getItem(AUTH_STATUS);
+    var authenticationStatus = localStorage.getItem(KeywordConstants.Authorization.AUTH_STATUS);
 
     if (authenticationStatus != null && authenticationStatus == "TRUE") {
       return true;
@@ -115,7 +113,7 @@ export class AuthenticationService {
   }
   checkToken() {
     
-    var token = localStorage.getItem(AUTH_TOKEN_KEY);
+    var token = localStorage.getItem(KeywordConstants.Authorization.AUTH_TOKEN_KEY);
     return (token) ? true : false;
   }
 }

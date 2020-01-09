@@ -3,7 +3,8 @@ import { HelperService } from '../helper/helper.service';
 import { User } from 'src/app/models/user-access-management/user';
 import { NetworkService } from '../network/network.service';
 import { Role } from 'src/app/models/user-access-management/role';
-const USER_DETAIL_URL = '/users/info'
+import { KeywordConstants } from 'src/app/constants/keyword-constants';
+import { URLConstants } from 'src/app/constants/url-constants';
 @Injectable({
   providedIn: 'root'
 })
@@ -17,19 +18,10 @@ export class AuthorizationService {
   }
   
   getUseDetails(success: (any)) {
-    this.networkService.get(USER_DETAIL_URL, response => {
+    this.networkService.get(URLConstants.UserAccessManagement.USER_DETAIL_URL, response => {
       this.currentUser = new User(response);
       this.storeUser(this.currentUser);
-      success(this.currentUser);
-      if(this.isAdmin())
-      {
-       
-      }
-      else
-      {
-
-      }
-
+      success(this.currentUser);  
 
     }, () => {
       this.currentUser = new User(HelperService.EmptyJSON());
@@ -54,21 +46,6 @@ export class AuthorizationService {
     else {
       return "";
     }
-  }
-  isApprover() {
-    return this.hasRole('Approver');
-  }
-  isOperator() {
-    return this.hasRole('Operator');
-  }
-  isAdmin() {
-    return this.hasRole('Admin');
-  }
-  isComOperator() {
-    return this.hasRole('COM-Operator');
-  }
-  isComApprover() {
-    return this.hasRole('COM-Approver');
   }
   hasRole(roleName: String) {
     if (this.currentUser != null && this.currentUser.Role != null) {
@@ -112,19 +89,7 @@ export class AuthorizationService {
     }
   }
 
-  hasAccessForModule(currentModule: String) {
-    if (this.currentUser != null && this.currentUser.Roles != null && this.currentUser.Roles.length != 0) {
-      this.currentUser.Modules.forEach(module => {    
-          if (module.Name == currentModule) {
-            return true;
-          }    
-      });
-      return false;
-    }
-    else {
-      return false;
-    }
-  }
+  
   storeUser(user:User)
   {
     localStorage.setItem("USER_ID",user.Id.toString());

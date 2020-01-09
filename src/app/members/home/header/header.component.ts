@@ -36,7 +36,6 @@ export class HeaderComponent implements OnInit {
     
     this.headerService.loggedInUser.subscribe(param => {
       this.loggedInUser = param;
-    this.isAdmin = this.authorizationService.isAdmin();
     });
  
   }

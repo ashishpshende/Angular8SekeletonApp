@@ -7,6 +7,7 @@ export class User  extends BaseModel {
     Email: string;
     UserName:string;
     Password: string;
+    ConfirmPassword: string;
     Modules:BaseModel[];
     Roles:Role[];
     Role:Role;

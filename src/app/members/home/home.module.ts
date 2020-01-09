@@ -16,7 +16,7 @@ import { SideMenuModule } from './side-menu/side-menu.module';
   declarations: [HomeComponent,
     HeaderComponent,
     FooterComponent,
-    SideMenuComponent,],
+    SideMenuComponent],
   imports: [
     CommonModule,
     RouterModule.forChild([
