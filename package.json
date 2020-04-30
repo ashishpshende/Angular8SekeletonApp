@@ -21,7 +21,7 @@
     "@angular/router": "~8.2.5",
     "@ng-bootstrap/ng-bootstrap": "^5.1.5",
     "@types/jquery": "^3.3.31",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "malihu-custom-scrollbar-plugin": "^3.1.5",
     "moment-timezone": "^0.5.27",
     "ng-block-ui": "^2.1.8",
